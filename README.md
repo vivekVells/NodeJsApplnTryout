@@ -1,6 +1,9 @@
 # NodeJsApplnTryout
 Build application using NodeJs and understand how it works
 
+### version used info
+- node - v12.2.0
+
 ## ShortNotes
 - Node js is highly scalable, data intensive and helps to build real time apps faster.
 - It is based on non-blocking asynchronous architecture nature
@@ -19,6 +22,26 @@ Build application using NodeJs and understand how it works
         - note the const keyword here instead of the var usage. this is to avoid some unncessary or mistake in changing the imported module object info
 
 - Module Wrapper Function: Node does not executes the code directly. it wraps the code block by a function and executes
+- Node Modules:
+    - http: to create a simple http server 
+        - complexity of the routing increases with increase in route endpoints. so, express framework being used to handle such routing easier and gracefully. **Internally, express framework is built on the top of the http module**.
+        - using socket
+            ```server.on('connection', (socket) => { console.log(`Connection established... socket: ${socket}`) })```
+        - handling req, res
+        ```
+            const server = http.createServer((req, res) => { 
+                    if(req.url === "/") {
+                    console.log(`homepage endpoint being hit. URL: ${req.url}`)
+                    res.write("Welcome to Node JS World!!!")
+                    // closing the response stream I guess
+                    res.end()
+                } else if(req.url === "/api/allcourses") {
+                    console.log(`api/allcourses endpoing being hit. URL: ${req.url}`)
+                    res.write(JSON.stringify([{"id": 1, "course": "course1"}, {"id": 2, "course": "course2"}]))
+                    res.end()
+                } 
+            }
+        ```
 
 ## Impressions
 - So far, just getting started with simple modules and stuffs and I am so in love with this. its easier to get few things get done faster; just straight to the point. I think node js has huge potential in just gettings things done faster. kind of feeling it. There is lots to understand though. let's see... 
@@ -28,3 +51,4 @@ Build application using NodeJs and understand how it works
     - userInfo = os.userInfo()
 - Kafka logic in nodejs using events module
     - const EventEmitter = require('events') - like kafka => raise a signal event whenever required, listen to the raised signal type & handle accordingly
+
