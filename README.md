@@ -26,3 +26,5 @@ Build application using NodeJs and understand how it works
     - totalMemory = os.totalMem()
     - freeMemory = os.freeMem()
     - userInfo = os.userInfo()
+- Kafka logic in nodejs using events module
+    - const EventEmitter = require('events') - like kafka => raise a signal event whenever required, listen to the raised signal type & handle accordingly
