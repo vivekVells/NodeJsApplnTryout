@@ -46,11 +46,18 @@ emitter.emit("message")
 // emitter.emit("startlog", {"id": 4567, "name": "startLogger", "type": "function"})
 
 /*
- vsurulimuthu@LUSC02WJ09CHTDH  ~/Vivek/ProjectWorks/NodeJsApplnTryout   master ● ?  node modulestryout/events.js                                                                                                     ✔  4675  14:59:43
+Output:
+vsurulimuthu@LUSC02WJ09CHTDH  ~/Vivek/ProjectWorks/NodeJsApplnTryout   master ● ?  node modulestryout/events/events.js                                                                                              ✔  4690  16:05:13
 Events: function EventEmitter() {
   EventEmitter.init.call(this);
 }
 emitting hello event...
 'hello' event being emitted is listened...
+Message received as: Vivek
+Vivek as arg received...
+Message received as:
+no arg being received...
+Message received as: undefined
+send some damn msg arg...
  vsurulimuthu@LUSC02WJ09CHTDH  ~/Vivek/ProjectWorks/NodeJsApplnTryout   master ● ? 
 */
