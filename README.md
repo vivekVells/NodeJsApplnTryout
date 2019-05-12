@@ -19,3 +19,10 @@ Build application using NodeJs and understand how it works
         - note the const keyword here instead of the var usage. this is to avoid some unncessary or mistake in changing the imported module object info
 
 - Module Wrapper Function: Node does not executes the code directly. it wraps the code block by a function and executes
+
+## Impressions
+- So far, just getting started with simple modules and stuffs and I am so in love with this. its easier to get few things get done faster; just straight to the point. I think node js has huge potential in just gettings things done faster. kind of feeling it. There is lots to understand though. let's see... 
+  - modules here are awesome. for a project, [Task Process Manager](https://github.com/vivekVells/TaskProcessManager) using Java + SIGAR (to get system level information such as CPU, OS info, etc.) which I worked before to replicate the task manager was taking too much efforts to figure out a simple thing such as retrieving cpu usage info, user info, os info, etc... but here all such system level info can be easily accessed using this **os** module. Now that's awesome. **(I am pretty sure those who used Java + SIGAR + Spring boot understands why I am so excited for this part)**
+    - totalMemory = os.totalMem()
+    - freeMemory = os.freeMem()
+    - userInfo = os.userInfo()
